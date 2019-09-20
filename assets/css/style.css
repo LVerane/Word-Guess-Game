@@ -1,5 +1,5 @@
 body{
-    background: gray;
+    background: rgb(211, 202, 202);
 }
 
 .container {
@@ -8,19 +8,19 @@ body{
 }
 
 .main{
-    background: rgb(17, 233, 17);
+    background: #00C851;
 }
 
 h1 {
-    font-size: 5em;
-    background: rgb(37, 167, 37);
+    font-size: 4em;
+    background: #007E33;
     text-align: center;
     padding: 20px;
 }
 
 h2 {
-    font-size: 3em;
-    background: rgb(16, 171, 177);
+    font-size: 2em;
+    background: #0099CC;
     padding: 20px;
 }
 
@@ -28,4 +28,12 @@ p {
     font-size: 2em;
     padding: 10px;
     margin-left: 10px;
+}
+
+#wins, #losses{
+    font-size: 1em;
+    padding: 0;
+    margin-left: 0;
+    background: none;
+    display: inline;
 }
