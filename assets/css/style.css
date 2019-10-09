@@ -1,5 +1,5 @@
 body{
-    background: rgb(211, 202, 202);
+    background: rgb(235, 228, 228);
 }
 
 .container {
@@ -13,7 +13,7 @@ body{
 
 h1 {
     font-size: 4em;
-    background: #007E33;
+    /* background: #007E33; */
     text-align: center;
     padding: 20px;
 }
@@ -26,8 +26,9 @@ h2 {
 
 p {
     font-size: 2em;
-    padding: 10px;
     margin-left: 10px;
+    height: 2em;
+    line-height: 2em;
 }
 
 #wins, #losses{

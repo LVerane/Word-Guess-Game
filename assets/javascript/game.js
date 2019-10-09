@@ -13,11 +13,6 @@ loss = 0;
 
 ready = false;
 
-// console.log(chosenAnimal);
-// console.log(splitChosenAnimal);
-// console.log(chosenAnimal.length);
-// console.log(splitChosenAnimal.length);
-
 function reset (){
     chosenAnimal = animals[Math.floor(Math.random() * animals.length)];
     splitChosenAnimal = chosenAnimal.split("");
@@ -31,6 +26,7 @@ function reset (){
     emptyWord.textContent = wordToBeGuessed.join(" ");
     guesses.textContent = guessesLeft;
     finalMessage.textContent = "";
+    $("#message-container").attr("hidden", true);
     usedLetters.textContent = "";
 }
 
@@ -46,6 +42,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             if(guessedLetters.indexOf(userGuess) === -1){
                 finalMessage.textContent = "";
+                $("#message-container").attr("hidden", true);
                 guessedLetters.push(userGuess);
                 if(chosenAnimal.indexOf(userGuess) === -1){
                     wrongGuesses.push(userGuess);
@@ -58,8 +55,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     guessesLeft--;
                     if(guessesLeft === 0){
                         finalMessage.textContent = "Press any key to try again";
+                        $("#message-container").attr("hidden", false);
                         title.textContent = "You Lost!";
                         loss++;
+                        $("#score").attr("hidden", false);
                         losses.textContent = loss;
                         ready = false;                        
                     }
@@ -76,12 +75,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
             }else{
                 finalMessage.textContent = "You already tried that";
+                $("#message-container").attr("hidden", false);
             }
 
             if(wordToBeGuessed.join("") === chosenAnimal){
                 finalMessage.textContent = "Press any key to try again";
+                $("#message-container").attr("hidden", false);
                 title.textContent = "Congratulations!! You Won!!";
                 win++;
+                $("#score").attr("hidden", false);
                 wins.textContent = win;
                 ready = false;
             }

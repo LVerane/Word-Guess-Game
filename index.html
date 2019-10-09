@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </head>
 <body>
     <div class="container">
@@ -18,11 +20,12 @@
             <p id="guesses"></p>
             <h2>You Guessed Wrong:</h2>
             <p id="usedLetters"></p>
-            <h2>Message:</h2>
-            <p id="finalMessage"></p>
-            <h2>You have <p id="wins">0</p> wins and <p id="losses">0</p> losses</h2>
+            <div id="message-container" hidden>
+                <h2>Message:</h2>
+                <p id="finalMessage"></p>
+            </div>
+            <h2 id="score" hidden>You have <p id="wins">0</p> wins and <p id="losses">0</p> losses</h2>
         </div>
     </div>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
